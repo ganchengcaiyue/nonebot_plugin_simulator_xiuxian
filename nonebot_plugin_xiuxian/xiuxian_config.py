@@ -1,44 +1,45 @@
-
+try:
+    import ujson as json
+except ImportError:
+    import json
 from pathlib import Path
-import json
-import yaml
 
 DATABASE = Path() / "data" / "xiuxian"
 
 class XiuConfig:
 
     def __init__(self):
-        self.config_yamlpath = DATABASE / "config.yaml"
-        config_data = self._config_data()
 
-        self.level = config_data['level']
-        self.level_up_cd = config_data["level_up_cd"]  # 境界突破CD 单位分钟
-        self.closing_exp = config_data['closing_exp']  # 闭关每分钟增加的修为
-        self.closing_exp_upper_limit = config_data['closing_exp_upper_limit']  # 闭关可获取修为上限（下一个境界需要的修为的1.5倍）
-        self.level_punishment_floor = config_data['level_punishment_floor']  # 突破失败扣除修为，惩罚下限(当前实例：1%)
-        self.level_punishment_limit = config_data['level_punishment_limit']  # 突破失败扣除修为，惩罚上限(当前实例：10%)
-        self.level_up_probability = config_data['level_up_probability']  # 突破失败增加当前境界突破概率的比例
-        self.sign_in_lingshi_lower_limit = config_data['sign_in_lingshi_lower_limit']  # 每日签到灵石下限
-        self.sign_in_lingshi_upper_limit = config_data['sign_in_lingshi_upper_limit']  # 每日签到灵石上限
-        self.sign_in_xiuwei_lower_limit = config_data['sign_in_xiuwei_lower_limit']  # 每日签到修为下限
-        self.sign_in_xiuwei_upper_limit = config_data['sign_in_xiuwei_upper_limit']  # 每日签到修为上限
-        self.tou = config_data['tou']  # 偷灵石惩罚
-        self.tou_lower_limit = config_data['tou_lower_limit']  # 偷灵石下限
-        self.tou_upper_limit = config_data['tou_upper_limit']  # 偷灵石上限
-        self.remake = config_data['remake']  # 重入仙途的消费
-        self.sect_min_level = config_data['sect_min_level']  # 创建宗门的最低修为等级要求
-        self.sect_create_cost = config_data['sect_create_cost']  # 创建宗门的最低修为等级要求
-        self.user_info_cd = config_data['user_info_cd']  # 我的修仙信息查询cd
-        self.user_info_cd_msg = config_data['user_info_cd_msg']
-        self.dufang_cd = config_data['dufang_cd']  # 金银阁cd
-        self.dufang_cd_msg = config_data['dufang_cd_msg']
-        self.tou_cd = config_data['tou_cd']  # 偷灵石CD
-        self.battle_boss_cd = config_data['battle_boss_cd']  # 讨伐bossCD
-        # self.ggg = config_data['ggg']
+
+        self.level = list(USERRANK.keys())
+        self.level_up_cd = 60  # 突破CD(分钟)
+        self.closing_exp = 30  # 闭关每分钟获取的修为
+        self.closing_exp_upper_limit = 1.5  # 闭关获取修为上限（例如：1.5 下个境界的修为数*1.5）
+        self.level_punishment_floor = 1  # 突破失败扣除修为，惩罚下限（百分比）
+        self.level_punishment_limit = 10  # 突破失败扣除修为，惩罚上限(当前实例：10%)
+        self.level_up_probability = 0.3  # 突破失败增加当前境界突破概率的比例
+        self.sign_in_lingshi_lower_limit = 500  # 每日签到灵石下限
+        self.sign_in_lingshi_upper_limit = 5000  # 每日签到灵石上限
+        self.sign_in_xiuwei_lower_limit = 10000  # 每日签到修为下限
+        self.sign_in_xiuwei_upper_limit = 100000  # 每日签到修为上限
+        self.tou = 600 # 偷灵石惩罚
+        self.tou_lower_limit = 200  # 偷灵石下限
+        self.tou_upper_limit = 2000 # 偷灵石上限
+        self.remake = 1000  # 重入仙途的消费
+        self.sect_min_level = "渡劫境初期"  # 创建宗门的最低修为等级要求
+        self.sect_create_cost = 25  # 创建宗门的最低修为等级要求
+        self.user_info_cd = 10  # 我的修仙信息查询cd
+        self.user_info_cd_msg = 5
+        self.dufang_cd_msg = 5
+        self.tou_cd = 5  # 偷灵石CD
+        self.battle_boss_cd = 60  # 讨伐bossCD
+        self.version = "xiuxian_1.1"
 
         self.sql_table = ["user_xiuxian", "user_cd", "sects", "back", "BuffInfo"]  # 数据库表校验
-        self.sql_user_xiuxian = ["level_up_rate", "sect_id", "sect_position", "hp", "mp", "atk", "atkpractice",
-                           "sect_task", "sect_contribution", "sect_elixir_get", "blessed_spot_flag", "blessed_spot_name"]  # 数据库字段校验
+        self.sql_user_xiuxian = ["level_up_rate","sect_id","sect_position"
+                                 ,"hp", "mp", "atk", "atkpractice", "sect_task",
+                                "sect_contribution","sect_elixir_get", 
+                                "blessed_spot_flag","blessed_spot_name"]   # 数据库字段校验
         self.sql_sects = ["sect_materials", "mainbuff", "secbuff", "elixir_room_level"]
         self.sql_buff = ["armor_buff", "atk_buff", "blessed_spot"]
         self.sql_back = ["bind_num"]
@@ -49,12 +50,6 @@ class XiuConfig:
         #                    "sect_task"]  # 数据库字段校验
         # sql_sects: ["sect_materials", "mainbuff", "secbuff"]
 
-    def _config_data(self):
-        """配置数据"""
-        with open(self.config_yamlpath, 'r', encoding='utf-8') as e:
-            a = e.read()
-            data = yaml.safe_load(a)
-            return data
 
 
 class JsonConfig:

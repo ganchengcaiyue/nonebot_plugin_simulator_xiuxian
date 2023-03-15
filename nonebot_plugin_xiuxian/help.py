@@ -6,7 +6,7 @@ Help帮助信息
 
 """
 
-__xiuxian_version__ = "v0.4.26"
+__xiuxian_version__ = "v0.5.12"
 
 __xiuxian_notes__ = f"""
 指令：
