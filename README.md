@@ -1,4 +1,4 @@
-# nonebot_plugin_xiuxian
+# nonebot_plugin_simulator_xiuxian
 
 _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 
@@ -6,7 +6,7 @@ _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 
 本插件主要为实现群聊修仙功能,最近经常封号，请自行判断后再使用，已默认转成图片模式，如需关闭，可在config.py处调整img字段为false
 
-## 设定征集中，有好的想法可以推送给我哦~~~
+## 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
 ## 特色功能
 
@@ -27,14 +27,14 @@ _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 
 
 ```
-pip install nonebot-plugin-xiuxian
-nb plugin install nonebot-plugin-xiuxian
+pip install nonebot_plugin_simulator_xiuxian
+nb plugin install nonebot_plugin_simulator_xiuxian
 ```
 
 - 使用github处拉取源码使用
 
 ```
-git clone https://github.com/s52047qwas/nonebot_plugin_xiuxian.git
+git clone https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian.git
 ```
 
 2、下载数据文件
@@ -48,12 +48,13 @@ bot的数据文件夹一般为bot.py同级目录下的data文件夹
 - 然后在bot.py文件中添加
 
 ```
-nonebot.load_plugin('nonebot_plugin_xiuxian')
+nonebot.load_plugin('nonebot_plugin_simulator_xiuxian')
 ```
 
 4、如果遇到问题，请先百度和查看下方的 【一些问题】
 
-5、如解决不了进交流群：760517008 提问，提问请贴上完整的日志
+5、如解决不了进交流群：760517008 提问，提问请贴上完整的日志<br> 
+              群里回的快！（疯狂暗示）
 
 ## 配置文件
 1、配置文件一般在data/xiuxian文件夹下，自行按照json格式修改即可，一些字段的含义可以进群交流<br>
@@ -62,10 +63,10 @@ nonebot.load_plugin('nonebot_plugin_xiuxian')
 ## 更新
 - 使用脚手架安装的
 ```
-pip install nonebot-plugin-xiuxian -U
+pip install nonebot_plugin_simulator_xiuxian -U
 ```
 ```
-pip install nonebot-plugin-xiuxian --upgrade
+pip install nonebot_plugin_simulator_xiuxian --upgrade
 ```
 - 使用github处拉取源码使用的
 进入插件目录执行命令：
@@ -84,14 +85,14 @@ git pull
 
 ## 一些问题
 
-- 当前首次使用，未自动创建json文件及sql文件，请在[githut](https://github.com/s52047qwas/nonebot_plugin_xiuxian)处，目录data -> xiuxian
+- 当前首次使用，未自动创建json文件及sql文件，请在[hugging](https://huggingface.co/luoyefufeng/xiuxian_1/resolve/main/xiuxian.zip)处下载，目录data -> xiuxian
 处下载的文件，放置于bot目录，data -> xiuxian文件夹处
 - 当为放置为plugins目录使用时，请修改根目录下__init__.py文件中的42行：src=''中的内容，填写的是存放插件的目录，一般情况下 src='src.plugins.'  如有不同请按照格式修改
 ## 特别感谢
 
 - [NoneBot2](https://github.com/nonebot/nonebot2)：本插件实装的开发框架。
 - [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)：稳定完善的 CQHTTP 实现。
-
+- [xiuxian](https://github.com/s52047qwas/nonebot_plugin_xiuxian) 原版修仙
 ## 插件依赖
 
 - nonebot2
@@ -102,7 +103,7 @@ git pull
 
 大家喜欢的话可以给这个项目点个star
 
-有bug、意见和建议都欢迎提交 [Issues](https://github.com/s52047qwas/nonebot_plugin_xiuxian/issues) 
+有bug、意见和建议都欢迎提交 [Issues](https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian/issues) 
 或者联系进入QQ交流群：760517008
 
 ## 许可证
