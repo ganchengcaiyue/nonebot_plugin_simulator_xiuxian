@@ -57,23 +57,6 @@ work = {}  # 悬赏令信息记录
 sect_out_check = {}  # 退出宗门或踢出宗门信息记录
 sql_message = XiuxianDateManage()  # sql类
 
-from nonebot import load_all_plugins
-src = ''
-load_all_plugins(
-        [
-            f'{src}nonebot_plugin_xiuxian.xiuxian_boss',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_bank',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_sect',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_info',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_buff',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_back',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_rift',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_mixelixir',
-            f'{src}nonebot_plugin_xiuxian.xiuxian_work',
-        ],
-        [],
-    )
-
 
 
 @run_xiuxian.handle()
