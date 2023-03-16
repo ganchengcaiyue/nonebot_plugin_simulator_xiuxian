@@ -47,6 +47,7 @@ load_all_plugins(
             f'{src}nonebot_plugin_simulator_xiuxian.xiuxian_rift',
             f'{src}nonebot_plugin_simulator_xiuxian.xiuxian_mixelixir',
             f'{src}nonebot_plugin_simulator_xiuxian.xiuxian_work',
+            f'{src}nonebot_plugin_simulator_xiuxian.xiuxian_base',
         ],
         [],
     )
