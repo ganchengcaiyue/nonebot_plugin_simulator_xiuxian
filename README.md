@@ -4,7 +4,8 @@ _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 
 ## 简介
 
-本插件主要为实现群聊修仙功能,最近经常封号，请自行判断后再使用，已默认转成图片模式，如需关闭，可在config.py处调整img字段为false
+本插件主要为实现群聊修仙功能,最近经常封号，请自行判断后再使用，已默认转成图片模式，如需关闭，可在config.py处调整img字段为false<br>
+`推荐使用[修仙2.0](https://github.com/QingMuCat/nonebot_plugin_xiuxian_2)`
 
 ## 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
@@ -77,7 +78,7 @@ git pull
 
 ## 功能展示
 
-- 使用 `/我要修仙` 指令触发机器人，机器人创建用户信息，生成灵根，境界等信息。
+- 使用 `我要修仙` 指令触发机器人，机器人创建用户信息，生成灵根，境界等信息。
 - 发送突破，当修为足够时，可突破境界。
 - 发送修仙签到，获取每日初始化的灵石及修为。
 
@@ -93,6 +94,7 @@ git pull
 - [NoneBot2](https://github.com/nonebot/nonebot2)：本插件实装的开发框架。
 - [go-cqhttp](https://github.com/Mrs4s/go-cqhttp)：稳定完善的 CQHTTP 实现。
 - [xiuxian](https://github.com/s52047qwas/nonebot_plugin_xiuxian) 原版修仙
+- [xiuxian2](https://github.com/QingMuCat/nonebot_plugin_xiuxian_2) 修仙2
 ## 插件依赖
 
 - nonebot2
