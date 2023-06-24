@@ -2,7 +2,6 @@ import random
 import re
 from datetime import datetime
 
-from ..help import *
 from nonebot import get_driver, require, on_command
 from nonebot.adapters.onebot.v11 import (
     PRIVATE_FRIEND,
@@ -59,6 +58,7 @@ sql_message = XiuxianDateManage()  # sql类
 
 
 
+
 @run_xiuxian.handle()
 async def _(bot: Bot, event: GroupMessageEvent):
     """加入修仙"""
@@ -112,14 +112,13 @@ async def _(bot: Bot, event: GroupMessageEvent):
     await data_check_conf(bot, event)
 
     font_size = 30
-    title = '修仙模拟器帮助信息'
+    title = '修仙帮助'
     msg = __xiuxian_notes__
-#     img = Txt2Img(font_size)
-#     pic = img.save(title, msg)
-#     await help_in.send(MessageSegment.image(pic))
+    img = Txt2Img(font_size)
+    pic = img.save(title, msg)
+    await help_in.send(MessageSegment.image(pic))
 #     msg = help.__xiuxian_notes__
-    await help_in.send(msg, at_sender=True)
-
+#     await help_in.send(msg, at_sender=True)
 
 __xiuxian_notes__ = f"""
 指令：
@@ -143,6 +142,13 @@ __xiuxian_notes__ = f"""
 18、秘境系统：发送"秘境帮助"获取
 19、启用/禁用修仙功能：当前群开启或关闭修仙功能
 20、炼丹帮助：炼丹功能
+
+"境界信息"
+太乙境>金仙境>真仙境>半步真仙>渡劫境>大乘境>
+合体境>炼虚境>化神境>元婴境>结丹境>筑基境>fw
+
+"灵根信息"
+混沌灵根>融合灵根>超灵根>龙灵根>天灵根>变异灵根>真灵根>fw
 """.strip()
 
 
