@@ -10,7 +10,7 @@ def download_xiuxian_data():
     path_data = Path() / "data"
     zipPath = str(path_data / "xiuxian_data_temp.zip")  # 压缩包的绝对路径
     version = "xiuxian_version.txt"
-    URL = "https://huggingface.co/luoyefufeng/xiuxian_1/resolve/main/xiuxian.zip"
+    URL = "https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main"
 
     def get_data():
         wget.download(URL, out=zipPath)  # 获取内容
