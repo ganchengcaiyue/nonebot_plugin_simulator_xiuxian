@@ -10,7 +10,9 @@ _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 ## 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
 ## 计划
-移除认为与修仙无关功能，简化修仙命令。
+
+1、移除认为与修仙无关功能，简化修仙命令。<br>
+2、新功能开发 /完成度-50%。<br>
 
 ## 特色功能
 
@@ -58,7 +60,7 @@ nonebot.load_plugin('nonebot_plugin_simulator_xiuxian')
 4、如果遇到问题，请先百度和查看下方的 【一些问题】
 
 5、如解决不了进交流群：760517008 提问，提问请贴上完整的日志,群里回的快！（疯狂暗示）<br> 
-   修仙体验群:766929439
+   修仙体验群:
 
 ## 配置文件
 1、配置文件一般在data/xiuxian文件夹下，自行按照json格式修改即可，一些字段的含义可以进群交流<br>
@@ -91,7 +93,7 @@ git pull
 
 - 当前首次使用，未自动创建json文件及sql文件，请在[hugging](https://huggingface.co/luoyefufeng/xiuxian_1/resolve/main/xiuxian.zip)处下载，目录data -> xiuxian
 处下载的文件，放置于bot目录，data -> xiuxian文件夹处
-- 当为放置为plugins目录使用时，请修改根目录下__init__.py文件中的42行：src=''中的内容，填写的是存放插件的目录，一般情况下 src='src.plugins.'  如有不同请按照格式修改
+- 当为放置为plugins目录使用时，请修改xiuxian目录下__init__.py文件中的42行：src=''中的内容，填写的是存放插件的目录，一般情况下 src='src.plugins.'  如有不同请按照格式修改
 ## 特别感谢
 
 - [NoneBot2](https://github.com/nonebot/nonebot2)：本插件实装的开发框架。
