@@ -69,7 +69,7 @@ async def _(bot: Bot, event: GroupMessageEvent):
     if user_name:
         pass
     else:
-        user_name = "无名氏(发送改名+道号更新)"
+        user_name = "无名氏(发送道号+道号更新)"
     level_rate = sql_message.get_root_rate(mess.root_type)  # 灵根倍率
     realm_rate = jsondata.level_data()[mess.level]["spend"]  # 境界倍率
     sect_id = mess.sect_id

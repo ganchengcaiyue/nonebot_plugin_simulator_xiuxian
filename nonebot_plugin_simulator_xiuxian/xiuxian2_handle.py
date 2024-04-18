@@ -1090,6 +1090,24 @@ class XiuxianDateManage:
         cur.execute(sql_str)
         self.conn.commit()
 
+
+
+    def xito(self):
+        uba = random.randint(1,2)
+        ubb = random.randint(1,2)
+        ubs = int(uba - ubb) 
+        return int(ubs)   
+
+    def lingg(self, user_id):
+        cur = self.conn.cursor()
+        print(user_id)
+        sql = f"UPDATE user_xiuxian SET root=?,root_type=? where user_id=?"
+        cur.execute(sql, ("玄灵根", "五相灵根", user_id))
+        self.conn.commit()
+        return "系统修改了你的灵根，新的灵根为：玄灵根，类型为：五相灵根"
+
+
+
 class XiuxianJsonDate:
     def __init__(self):
         self.root_jsonpath = DATABASE / "灵根.json"
@@ -1417,49 +1435,3 @@ def final_user_data(user_data):
     
 if __name__ == '__main__':
     print(OtherSet().date_diff("2022-09-08 00:42:56.740255", "2022-09-08 00:42:56.740255"))
-
-    # paths = r"G:\yuzi_bot\yuzi_bot\data\xiuxian\悬赏令.json"
-    # with open(paths, 'r', encoding='utf-8') as e:
-    #     a = e.read()
-    #     data = json.loads(a)
-    #     get_work_list = []
-    #     for i in data:
-    #         name = random.choice(list(data[i].keys()))
-    #         get_work_list.append([name,data[i][name]["rate"],data[i][name]["succeed_thank"]])
-    #     print(get_work_list)
-    #
-    #     work_event = None
-    #     for i, v in data.items():
-    #         for vk, vv in v.items():
-    #             if vk == get_work_list[0][0]:
-    #                 work_event = vv
-    #
-    #     print(work_event["rate"])
-    #     if random.randint(1, 100) <= work_event["rate"]:
-    #         print(random.choice( work_event["succeed"]), work_event["succeed_thank"])
-    #     else:
-    #         print (random.choice(work_event["fail"]), work_event["fail_thank"])
-
-#     apath = r"G:\yuzi_bot\yuzi_bot\data\xiuxian\xiuxian.db"
-#     conn = sqlite3.connect(apath)
-#     sql = f"""SELECT user_name,level,exp FROM user_xiuxian
-# WHERE user_name is NOT NULL
-# ORDER BY CASE
-# WHEN level = '筑基境圆满' THEN '1'
-# WHEN level = '筑基境中期' THEN '2'
-# WHEN level = '筑基境初期' THEN '3'
-# WHEN level = '练气境圆满' THEN '4'
-# WHEN level = '练气境中期' THEN '5'
-# WHEN level = '练气境初期' THEN '6'
-# WHEN level = '江湖好手' THEN '7'
-# ELSE level END ASC,exp DESC LIMIT 5"""
-#     cur = conn.cursor()
-#     cur.execute(sql,)
-#     result = cur.fetchall()
-#     mess = f"位面境界排行榜TOP5\n"
-#     num=0
-#     for i in result:
-#         num+=1
-#         mess += F"TOP{num}:{i[0]},境界：{i[1]},修为：{i[2]}\n"
-#
-#     print(mess)

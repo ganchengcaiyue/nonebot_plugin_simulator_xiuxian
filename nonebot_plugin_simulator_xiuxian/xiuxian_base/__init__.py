@@ -32,7 +32,7 @@ package = on_command("我的纳戒", aliases={"升级纳戒"}, priority=5)
 sign_in = on_command("修仙签到", priority=5)
 help_in = on_command("修仙帮助", priority=5)
 rank = on_command("排行榜", aliases={"修仙排行榜", "灵石排行榜", "战力排行榜", "境界排行榜", "宗门排行榜"}, priority=5)
-remaname = on_command("改名", priority=5)
+remaname = on_command("道号", priority=5)
 level_up = on_command("突破", priority=5)
 in_closing = on_command("闭关", priority=5)
 give_stone = on_command("送灵石", priority=5)
@@ -55,8 +55,6 @@ driver = get_driver()
 work = {}  # 悬赏令信息记录
 sect_out_check = {}  # 退出宗门或踢出宗门信息记录
 sql_message = XiuxianDateManage()  # sql类
-
-
 
 
 @run_xiuxian.handle()
@@ -127,7 +125,7 @@ __xiuxian_notes__ = f"""
 3、修仙签到：获取灵石及修为
 4、重入仙途：重置灵根数据，每次{XiuConfig().remake}灵石
 5、金银阁：猜大小/奇偶/数字，赌灵石 示例:金银阁10大/小/奇/偶/猜3，（代码默认注释，该功能会导致bot被封号）
-6、改名xx：修改你的道号
+6、道号xx：修改你的道号
 7、突破：修为足够后，可突破境界（一定几率失败）
 8、闭关、出关、灵石出关：修炼增加修为，挂机功能
 9、送灵石100@xxx,偷灵石@xxx,抢灵石@xxx
@@ -161,16 +159,25 @@ async def _(bot: Bot, event: GroupMessageEvent):
         user_id, group_id, mess = await data_check(bot, event)
     except MsgError:
         return
-
-    name, root_type = XiuxianJsonDate().linggen_get()
-    result = sql_message.ramaker(name, root_type, user_id)
-    sql_message.update_power2(user_id)  # 更新战力
-    if XiuConfig().img:
-        msg = await pic_msg_format(result, event)
-        pic = await get_msg_pic(msg)
-        await restart.finish(MessageSegment.image(pic))
+    if sql_message.xito() == 0:
+        result = sql_message.lingg(user_id)
+        sql_message.update_power2(user_id)  # 更新战力
+        if XiuConfig().img:
+            msg = await pic_msg_format(result, event)
+            pic = await get_msg_pic(msg)
+            await restart.finish(MessageSegment.image(pic))
+        else:
+            await restart.finish(result, at_sender=True)
     else:
-        await restart.finish(result, at_sender=True)
+            name, root_type = XiuxianJsonDate().linggen_get()
+            result = sql_message.ramaker(name, root_type, user_id)
+            sql_message.update_power2(user_id)  # 更新战力
+            if XiuConfig().img:
+                msg = await pic_msg_format(result, event)
+                pic = await get_msg_pic(msg)
+                await restart.finish(MessageSegment.image(pic))
+            else:
+                await restart.finish(result, at_sender=True)
 
 
 @rank.handle()

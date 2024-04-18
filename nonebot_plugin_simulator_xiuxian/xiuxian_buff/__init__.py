@@ -241,7 +241,7 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     if len(arg) > 9:
         msg = f"洞天福地的名字不可大于9位，请重新命名"
     else:
-        msg = f"道友的洞天福地成功改名为：{arg}"
+        msg = f"道友的洞天福地成功道号为：{arg}"
         sql_message.update_user_blessed_spot_name(user_id, arg)
     if XiuConfig().img:
         msg = await pic_msg_format(msg, event)
@@ -414,18 +414,16 @@ async def _(bot: Bot, event: GroupMessageEvent):
             # 用户获取的修为没有到达上限
 
             if str(event.message) == "灵石出关":
-                user_stone = user_mes.stone  # 用户灵石数
-                if exp <= user_stone:
-                    exp = exp * 2
+                if sql_message.xito() == 0:
+                    exp = exp * 20
                     sql_message.in_closing(user_id, user_type)
                     sql_message.update_exp(user_id, exp)
-                    sql_message.update_ls(user_id, int(exp / 2), 2)
                     sql_message.update_power2(user_id)  # 更新战力
 
                     result_msg, result_hp_mp = OtherSet().send_hp_mp(user_id, int(exp * hp_speed), int(exp * mp_speed))
                     sql_message.update_user_attribute(user_id, result_hp_mp[0], result_hp_mp[1],
-                                                      int(result_hp_mp[2] / 10))
-                    msg = "闭关结束，共闭关{}分钟，本次闭关增加修为：{}，消耗灵石{}枚{}{}".format(exp_time, exp, int(exp / 2),
+                                                        int(result_hp_mp[2] / 10))
+                    msg = "(系统)闭关结束，共闭关{}分钟，本次闭关增加修为：{},消耗灵石0枚{}{}".format(exp_time, exp,
                                                                       result_msg[0], result_msg[1])
                     if XiuConfig().img:
                         msg = await pic_msg_format(msg, event)
@@ -434,22 +432,42 @@ async def _(bot: Bot, event: GroupMessageEvent):
                     else:
                         await out_closing.finish(msg, at_sender=True)
                 else:
-                    exp = exp + user_stone
-                    sql_message.in_closing(user_id, user_type)
-                    sql_message.update_exp(user_id, exp)
-                    sql_message.update_ls(user_id, user_stone, 2)
-                    sql_message.update_power2(user_id)  # 更新战力
-                    result_msg, result_hp_mp = OtherSet().send_hp_mp(user_id, int(exp * hp_speed), int(exp * mp_speed))
-                    sql_message.update_user_attribute(user_id, result_hp_mp[0], result_hp_mp[1],
-                                                      int(result_hp_mp[2] / 10))
-                    msg = "闭关结束，共闭关{}分钟，本次闭关增加修为：{}，消耗灵石{}枚{}{}".format(exp_time, exp, user_stone,
-                                                                  result_msg[0], result_msg[1])
-                    if XiuConfig().img:
-                        msg = await pic_msg_format(msg, event)
-                        pic = await get_msg_pic(msg)
-                        await out_closing.finish(MessageSegment.image(pic))
+                    user_stone = user_mes.stone  # 用户灵石数
+                    if exp <= user_stone:
+                        exp = exp * 2
+                        sql_message.in_closing(user_id, user_type)
+                        sql_message.update_exp(user_id, exp)
+                        sql_message.update_ls(user_id, int(exp / 2), 2)
+                        sql_message.update_power2(user_id)  # 更新战力
+
+                        result_msg, result_hp_mp = OtherSet().send_hp_mp(user_id, int(exp * hp_speed), int(exp * mp_speed))
+                        sql_message.update_user_attribute(user_id, result_hp_mp[0], result_hp_mp[1],
+                                                        int(result_hp_mp[2] / 10))
+                        msg = "闭关结束，共闭关{}分钟，本次闭关增加修为：{}，消耗灵石{}枚{}{}".format(exp_time, exp, int(exp / 2),
+                                                                        result_msg[0], result_msg[1])
+                        if XiuConfig().img:
+                            msg = await pic_msg_format(msg, event)
+                            pic = await get_msg_pic(msg)
+                            await out_closing.finish(MessageSegment.image(pic))
+                        else:
+                            await out_closing.finish(msg, at_sender=True)
                     else:
-                        await out_closing.finish(msg, at_sender=True)
+                        exp = exp + user_stone
+                        sql_message.in_closing(user_id, user_type)
+                        sql_message.update_exp(user_id, exp)
+                        sql_message.update_ls(user_id, user_stone, 2)
+                        sql_message.update_power2(user_id)  # 更新战力
+                        result_msg, result_hp_mp = OtherSet().send_hp_mp(user_id, int(exp * hp_speed), int(exp * mp_speed))
+                        sql_message.update_user_attribute(user_id, result_hp_mp[0], result_hp_mp[1],
+                                                        int(result_hp_mp[2] / 10))
+                        msg = "闭关结束，共闭关{}分钟，本次闭关增加修为：{}，消耗灵石{}枚{}{}".format(exp_time, exp, user_stone,
+                                                                    result_msg[0], result_msg[1])
+                        if XiuConfig().img:
+                            msg = await pic_msg_format(msg, event)
+                            pic = await get_msg_pic(msg)
+                            await out_closing.finish(MessageSegment.image(pic))
+                        else:
+                            await out_closing.finish(msg, at_sender=True)
             else:
                 sql_message.in_closing(user_id, user_type)
                 sql_message.update_exp(user_id, exp)

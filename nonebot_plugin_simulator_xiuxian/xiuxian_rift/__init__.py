@@ -138,7 +138,6 @@ async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
 @explore_rift.handle()
 async def _(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
     await data_check_conf(bot, event)
-
     isUser, user_info, msg = check_user(event)
     if not isUser:
         if XiuConfig().img:
