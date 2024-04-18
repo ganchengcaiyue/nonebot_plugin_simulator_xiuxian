@@ -1,4 +1,10 @@
 {
+  "五相灵根" : {
+    "type_rate" : 0,
+    "type_list" : ["玄灵根"],
+    "type_speeds" : 5.0,
+    "type_flag" : []
+  },
   "混沌灵根" : {
     "type_rate" : 1,
     "type_list" : ["全属性灵根"],

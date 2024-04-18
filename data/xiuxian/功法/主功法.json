@@ -548,5 +548,15 @@
     "desc": "",
     "rank": "仙阶下品",
     "level": "18"
+  },
+  "9913": {
+    "name": "化气清天录",
+    "hpbuff": 3.0,
+    "mpbuff": 3.0,
+    "atkbuff": 5.0,
+    "ratebuff": 3.0,
+    "desc": "",
+    "rank": "仙阶上品",
+    "level": "10"
   }
 }
