@@ -92,7 +92,7 @@ git pull
 ![屏幕截图 2024-04-19 033714](https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian/assets/127736993/8519dca7-6a49-409a-a386-0a64e1faa500)
 ## 一些问题
 
-- 当前首次使用，未自动创建json文件及sql文件，请在[hugging](https://huggingface.co/luoyefufeng/xiuxian_1/resolve/main/xiuxian.zip)处下载，目录data -> xiuxian
+- 当前首次使用，未自动创建json文件及sql文件，请在[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)处下载，目录data -> xiuxian
 处下载的文件，放置于bot目录，data -> xiuxian文件夹处
 - 当为放置为plugins目录使用时，请修改xiuxian目录下__init__.py文件中的42行：src=''中的内容，填写的是存放插件的目录，一般情况下 src='src.plugins.'  如有不同请按照格式修改
 ## 特别感谢
