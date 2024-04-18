@@ -1093,8 +1093,8 @@ class XiuxianDateManage:
 
 
     def xito(self):
-        uba = random.randint(1,2)
-        ubb = random.randint(1,2)
+        uba = random.randint(1,20)
+        ubb = random.randint(1,20)
         ubs = int(uba - ubb) 
         return int(ubs)   
 
