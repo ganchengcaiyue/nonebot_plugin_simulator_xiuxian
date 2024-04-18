@@ -89,7 +89,7 @@ git pull
 - 发送修仙签到，获取每日初始化的灵石及修为。
 
 ![image](https://user-images.githubusercontent.com/44226600/187607785-3ea934f4-2b5c-418e-9b99-e8a8e5562125.png)
-
+![屏幕截图 2024-04-19 033714](https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian/assets/127736993/8519dca7-6a49-409a-a386-0a64e1faa500)
 ## 一些问题
 
 - 当前首次使用，未自动创建json文件及sql文件，请在[hugging](https://huggingface.co/luoyefufeng/xiuxian_1/resolve/main/xiuxian.zip)处下载，目录data -> xiuxian
@@ -102,6 +102,7 @@ git pull
 - [xiuxian](https://github.com/s52047qwas/nonebot_plugin_xiuxian) 原版修仙
 - [xiuxian2](https://github.com/QingMuCat/nonebot_plugin_xiuxian_2) 修仙2
 ## 插件依赖
+
 
 - nonebot2
 - nonebot-adapter-onebot
