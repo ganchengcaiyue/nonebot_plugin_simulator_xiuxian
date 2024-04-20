@@ -112,9 +112,8 @@ git pull
 
 大家喜欢的话可以给这个项目点个star
 
-有bug、意见和建议都欢迎提交 [Issues](https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian/issues) 
-或者联系进入QQ交流群：760517008<br>
-修仙体验群:766929439
+有bug、意见和建议都欢迎提交 [Issues](https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian/issues) <br>或者联系进入QQ交流群：760517008<br>(注：提交bug时加上你的地址)<br>修复bug X<br>干掉发现bug的 √<br>
+
 
 ## 许可证
 本项目使用 [MIT](https://choosealicense.com/licenses/mit/) 作为开源许可证
