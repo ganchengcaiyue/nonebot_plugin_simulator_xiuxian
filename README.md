@@ -9,6 +9,10 @@ _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 
 ## 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
+
+# 除git clone和zip下载其余方式需要先下载data数据包[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)
+
+
 ## 计划
 
 1、移除认为与修仙无关功能，简化修仙命令。<br>
@@ -48,7 +52,7 @@ git clone https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian.git
 2、下载数据文件
 
 使用git clone的方法的，进入插件目录，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
-使用pip的，在GitHub处下载data文件夹，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
+使用pip的，在[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)处下载data文件夹，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
 bot的数据文件夹一般为bot.py同级目录下的data文件夹
 
 3、加载插件
