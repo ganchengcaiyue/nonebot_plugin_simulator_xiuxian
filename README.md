@@ -1,6 +1,25 @@
-# nonebot_plugin_simulator_xiuxian
+<div align="center">
+  <img src="https://s2.loli.net/2022/06/16/opBDE8Swad5rU3n.png" width="180" height="180" alt="NoneBotPluginLogo">
+  <br>
+  <p><img src="https://s2.loli.net/2022/06/16/xsVUGRrkbn1ljTD.png" width="240" alt="NoneBotPluginText"></p>
+</div>
 
-_:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
+<div align="center">
+
+# 修仙1.0
+
+_✨ QQ群聊修仙文字游戏✨_
+
+🧬 插件主要为实现群聊修仙功能！🎉 
+
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/nonebot-2.0.0r4+-red.svg" alt="NoneBot">
+  <a href="https://pypi.org/project/nonebot_plugin_simulator_xiuxian/">
+      <img src="https://img.shields.io/pypi/v/nonebot_plugin_simulator_xiuxian.svg" alt="pypi">
+  </a>
+</p>
+</div>
 
 ## 简介
 
@@ -17,7 +36,6 @@ _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 
 1、移除认为与修仙无关功能，简化修仙命令。<br>
 2、新功能开发 /完成度-50%。<br>
-3、pip已经能够正常使用（nonebot_plugin_simulator_xiuxian 0.5.30）及以上<br>
 
 ## 特色功能
 
@@ -52,7 +70,7 @@ git clone https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian.git
 2、下载数据文件
 
 使用git clone的方法的，进入插件目录，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
-使用pip的，在[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)处下载data文件夹，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
+使用pip的，在GitHub处下载data文件夹，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
 bot的数据文件夹一般为bot.py同级目录下的data文件夹
 
 3、加载插件
