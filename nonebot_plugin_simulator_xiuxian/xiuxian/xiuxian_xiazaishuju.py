@@ -10,7 +10,7 @@ def download_xiuxian_data():
     path_data = Path() / "data"
     zipPath = str(path_data / "xiuxian_data_temp.zip")  # 压缩包的绝对路径
     version = "xiuxian_version.txt"
-    URL = "https://huggingface.co/luoyefufeng/xiuxian_1/resolve/main/xiuxian.zip"
+    URL = "https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main"
 
     def get_data():
         wget.download(URL, out=zipPath)  # 获取内容
@@ -49,10 +49,4 @@ def download_xiuxian_data():
                 zf.close()
             except Exception as e:
                 logger.info(f"修仙配置文件下载失败，原因{e}，一直失败请前往网址手动下载{URL}")
-            finally:
-                try:
-                    os.remove(zipPath)
-                    logger.info(f"原始压缩包已删除！")
-                except:
-                    logger.info(f"原始压缩包删除失败，请手动删除，路径{zipPath}!")
     return _main_()
