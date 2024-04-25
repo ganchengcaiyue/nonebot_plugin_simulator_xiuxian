@@ -68,8 +68,8 @@ git clone https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian.git
 2、下载数据文件
 
 使用git clone的方法的，进入插件目录，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
-使用pip的，在GitHub处下载data文件夹，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
-bot的数据文件夹一般为bot.py同级目录下的data文件夹
+使用pip，首次启动会在 data 下载压缩包 (xiuxian_XXX.zip) 解压并命名为 xiuxian 重新启动即可使用<br>
+bot的数据文件夹一般为 .env 同级目录下的data文件夹
 
 3、加载插件
 
@@ -79,7 +79,11 @@ bot的数据文件夹一般为bot.py同级目录下的data文件夹
 plugins = ['nonebot_plugin_simulator_xiuxian']
 ```
 
-4、如果遇到问题，请先百度和查看下方的 【一些问题】
+4、如果遇到问题
+
+- 当前首次使用，未自动创建json文件及sql文<br>在[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)处下载，目录data -> xiuxian
+处下载的文件，放置于bot目录，data -> xiuxian文件夹处<br>
+- 当为放置为src/plugins目录使用时<br>修改xiuxian目录下__init__.py文件中的42行：src=''中的内容<br>填写的是存放插件的目录，一般情况下 src='src.plugins.'  如有不同请按照格式修改
 
 5、如解决不了进交流群：760517008 提问，提问请贴上完整的日志,群里回的快！（疯狂暗示）<br> 
    修仙体验群: 766929439
@@ -111,11 +115,7 @@ git pull
 
 ![image](https://user-images.githubusercontent.com/44226600/187607785-3ea934f4-2b5c-418e-9b99-e8a8e5562125.png)
 ![屏幕截图 2024-04-19 033714](https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian/assets/127736993/8519dca7-6a49-409a-a386-0a64e1faa500)
-## 一些问题
 
-- 当前首次使用，未自动创建json文件及sql文件，请在[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)处下载，目录data -> xiuxian
-处下载的文件，放置于bot目录，data -> xiuxian文件夹处
-- 当为放置为plugins目录使用时，请修改xiuxian目录下__init__.py文件中的42行：src=''中的内容，填写的是存放插件的目录，一般情况下 src='src.plugins.'  如有不同请按照格式修改
 ## 特别感谢
 
 - [NoneBot2](https://github.com/nonebot/nonebot2)：本插件实装的开发框架。
