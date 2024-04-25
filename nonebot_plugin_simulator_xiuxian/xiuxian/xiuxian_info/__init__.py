@@ -39,7 +39,7 @@ def format_number(number: int) -> str:
     else:
         return str(number)
 
-xiuxian_message = on_command("我的修仙信息", aliases={"我的存档"}, priority=5)
+xiuxian_message = on_command("我的修仙信息", aliases={"修仙信息"}, priority=5)
 
 
 sql_message = XiuxianDateManage()  # sql类
