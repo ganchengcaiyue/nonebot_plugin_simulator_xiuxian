@@ -10,7 +10,7 @@ _:tada::tada::tada:修仙模拟器！:tada::tada::tada:_
 ## 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
 
-# 除git clone和zip下载其余方式需要先下载data数据包[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)
+# 除 git clone 和 zip 下载其余方式需要先下载 data 修仙包<br> xiuxian-main.zip 解压改成 xiuxian 放入 data<br>[[点击下载data修仙包]](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)
 
 
 ## 计划
