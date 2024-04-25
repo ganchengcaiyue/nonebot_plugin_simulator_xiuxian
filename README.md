@@ -26,11 +26,9 @@ _✨ QQ群聊修仙文字游戏✨_
 本插件主要为实现群聊修仙功能,最近经常封号，请自行判断后再使用，已默认转成图片模式，如需关闭，可在config.py处调整img字段为false<br>
 推荐使用[修仙2.0](https://github.com/QingMuCat/nonebot_plugin_xiuxian_2)
 
-## 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
+# 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
-
-# 除 git clone 和 zip 下载其余方式需要先下载 data 修仙包<br> xiuxian-main.zip 解压改成 xiuxian 放入 data<br>[[点击下载data修仙包]](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)
-
+# 启动时会自动下载 data/xiuxian.zip 需自行解压并命名为 xiuxian 才可正常使用修仙1.0<br>
 
 ## 计划
 
@@ -75,10 +73,10 @@ bot的数据文件夹一般为bot.py同级目录下的data文件夹
 
 3、加载插件
 
-- 然后在bot.py文件中添加
+- 然后在pyproject.toml文件中添加
 
 ```
-nonebot.load_plugin('nonebot_plugin_simulator_xiuxian')
+plugins = ['nonebot_plugin_simulator_xiuxian']
 ```
 
 4、如果遇到问题，请先百度和查看下方的 【一些问题】
