@@ -29,6 +29,7 @@ _✨ QQ群聊修仙文字游戏✨_
 # 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
 # 启动时会自动下载需要的压缩包到 data <br>需自行解压并命名为 xiuxian 才可正常使用修仙1.0<br>
+nonebot_plugin_simulator_xiuxian(0.5.36)及以上 
 
 ## 计划
 
@@ -72,8 +73,8 @@ git clone https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian.git
 bot的数据文件夹一般为 .env 同级目录下的data文件夹
 
 3、加载插件
-
-- 然后在pyproject.toml文件中添加
+pip 下载才
+- 然后在pyproject.toml文件中添加(pip 下载添加)
 
 ```
 plugins = ['nonebot_plugin_simulator_xiuxian']
