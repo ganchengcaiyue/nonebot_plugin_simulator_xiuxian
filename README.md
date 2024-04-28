@@ -69,7 +69,7 @@ git clone https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian.git
 2、下载数据文件
 
 使用git clone的方法的，进入插件目录，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
-使用pip，首次启动会在 data 下载压缩包 (xiuxian_XXX.zip) 解压并命名为 xiuxian 重新启动即可使用<br>
+使用pip，首次启动会在 data 下载压缩包 (xiuxian_XXX.zip) 解压拿出 xiuxian-main 并命名为 xiuxian 重新启动即可使用<br>
 bot的数据文件夹一般为 .env 同级目录下的data文件夹
 
 3、加载插件
