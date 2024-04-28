@@ -35,7 +35,7 @@ except Exception as e:
 require('nonebot_plugin_apscheduler')
 
 
-src = 'src.plugins.'                              # src = ''内应当是插件上级目录+插件保存地址,注意地址之接连接用. 
+src = 'src.plugins.nonebot_plugin_simulator_xiuxian.'                              # src = ''内应当是插件上级目录+插件保存地址,注意地址之接连接用. 
 load_all_plugins(
         [
             f'{src}xiuxian.xiuxian_boss',
