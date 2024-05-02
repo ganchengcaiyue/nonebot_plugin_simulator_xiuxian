@@ -28,7 +28,7 @@ _✨ QQ群聊修仙文字游戏✨_
 
 # 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
-# 启动时会自动下载需要的压缩包到 data <br>需自行解压并命名为 xiuxian 才可正常使用修仙1.0<br>
+# 启动时会自动下载需要的压缩包到 data  [[压缩包下载]](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)<br>需自行解压并命名为 xiuxian 才可正常使用修仙1.0<br>
 nonebot_plugin_simulator_xiuxian(0.5.40)及以上 
 
 ## 计划
