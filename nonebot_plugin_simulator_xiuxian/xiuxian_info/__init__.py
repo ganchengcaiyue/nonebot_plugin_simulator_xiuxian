@@ -13,13 +13,13 @@ from nonebot.adapters.onebot.v11 import (
     MessageSegment,
 )
 
-from nonebot_plugin_simulator_xiuxian.xiuxian2_handle import XiuxianDateManage, OtherSet
-from nonebot_plugin_simulator_xiuxian.data_source import jsondata
+from ..xiuxian2_handle import XiuxianDateManage, OtherSet
+from ..data_source import jsondata
 from .draw_user_info import draw_user_info_img
-from nonebot_plugin_simulator_xiuxian.cd_manager import add_cd, check_cd, cd_msg
+from ..cd_manager import add_cd, check_cd, cd_msg
 from .infoconfig import get_config
-from nonebot_plugin_simulator_xiuxian.utils import data_check_conf
-from nonebot_plugin_simulator_xiuxian.read_buff import UserBuffDate
+from ..utils import data_check_conf
+from ..read_buff import UserBuffDate
 
 config = get_config()
 
@@ -39,7 +39,7 @@ def format_number(number: int) -> str:
     else:
         return str(number)
 
-xiuxian_message = on_command("修仙信息", aliases={"我的修仙信息"}, priority=5)
+xiuxian_message = on_command("我的修仙信息", aliases={"修仙信息"}, priority=5)
 
 
 sql_message = XiuxianDateManage()  # sql类
