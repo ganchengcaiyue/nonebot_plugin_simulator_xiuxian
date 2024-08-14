@@ -28,7 +28,7 @@ _✨ QQ群聊修仙文字游戏✨_
 
 # 设定征集中，有好的想法可以推送给群主,只要你敢想群主都能干~~~
 
-# 启动时会自动下载需要的压缩包到 data  [[压缩包下载]](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)<br>需自行解压并命名为 xiuxian 才可正常使用修仙1.0<br>
+# 启动时会自动下载需要的压缩包到 data  [[压缩包下载]](https://codeload.github.com/ganchengcaiyue/xiuxian/zip/refs/heads/main)<br>需自行解压并命名为 xiuxian 才可正常使用修仙1.0<br>
 nonebot_plugin_simulator_xiuxian(0.5.40)及以上 
 
 ## 计划
@@ -69,7 +69,7 @@ git clone https://github.com/luoyefufeng/nonebot_plugin_simulator_xiuxian.git
 2、下载数据文件
 
 使用git clone的方法的，进入插件目录，把data文件夹中的全部内容移动到bot的数据文件夹中<br>
-使用pip，首次启动会在 data 下载压缩包 (xiuxian_XXX.zip) 解压拿出 xiuxian-main 并命名为 xiuxian 重新启动即可使用<br>
+使用pip，首次启动会在 data 下载压缩包 (xiuxian_XXX.zip) 解压拿出 xiuxian-XXX 并命名为 xiuxian 重新启动即可使用<br>
 bot的数据文件夹一般为 .env 同级目录下的data文件夹
 
 3、加载插件
@@ -82,7 +82,7 @@ plugins = ['nonebot_plugin_simulator_xiuxian']
 
 4、如果遇到问题
 
-- 当前首次使用，未自动创建json文件及sql文<br>在[GitHub](https://codeload.github.com/luoyefufeng/xiuxian/zip/refs/heads/main)处下载，目录data -> xiuxian
+- 当前首次使用，未自动创建json文件及sql文<br>在[GitHub](https://codeload.github.com/ganchengcaiyue/xiuxian/zip/refs/heads/main)处下载，目录data -> xiuxian
 处下载的文件，放置于bot目录，data -> xiuxian文件夹处<br>
 - 当为放置为src/plugins目录使用时<br>修改xiuxian目录下__init__.py文件中的42行：src=''中的内容<br>填写的是存放插件的目录，一般情况下 src='src.plugins.'  如有不同请按照格式修改
 
