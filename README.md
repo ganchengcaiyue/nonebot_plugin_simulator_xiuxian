@@ -1,12 +1,11 @@
 <div align="center">
-  <img src="https://smms.app/image/78gIAwqEJpz2Km3" width="180" height="180" alt="NoneBotPluginLogo">
+  <img src="https://s2.loli.net/2024/08/17/78gIAwqEJpz2Km3.png" width="180" height="180" alt="xiuxian1Logo">
   <br>
-  <p><img src="https://s2.loli.net/2022/06/16/xsVUGRrkbn1ljTD.png" width="240" alt="NoneBotPluginText"></p>
 </div>
 
 <div align="center">
 
-# 修仙1.0
+# nonebot_plugin_simulator_xiuxian
 
 _✨ QQ群聊修仙文字游戏✨_
 
